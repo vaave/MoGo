@@ -1,0 +1,77 @@
+.team {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 35px;
+
+   &__item {
+      flex: 0 1 calc(33.33% - 25px);
+      img {
+         width: 100%;
+         object-fit: cover;
+      }
+   }
+
+   &__inner {
+      margin-bottom: 30px;
+   }
+
+   &__social {
+      display: flex;
+      justify-content: center;
+      gap: 2px;
+   }
+
+   &__social-item {
+      position: relative;
+      flex: 0 1 25%;
+      max-width: 55px;
+      text-align: center;
+      &::after {
+         content: "";
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         width: 100%;
+         height: 55px;
+         z-index: -1;
+         background-color: #fce38a;
+         transition: background-color .3s linear;
+      }
+      svg {
+         width: 30px;
+         height: 25px;
+         fill: #f38181;
+         transition: fill .3s linear;
+      }
+      &:hover {
+         &::after {
+            background-color: #f38181;
+         }
+         svg {
+            fill: #ffffff;
+         }
+      }
+   }
+
+   &__info {
+      text-align: center;
+   }
+
+   &__name {
+      font-family: $title;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: #333333;
+      margin-bottom: 15px;
+   }
+
+   &__pos {
+      font-family: $basic;
+      font-size: 15px;
+      font-weight: 300;
+      font-style: italic;
+      color: #999999;
+   }
+}

@@ -1,0 +1,111 @@
+.hero {
+   position: relative;
+   background: url(./../src/img/bg/hero-bg.jpg) top center no-repeat;
+   background-size: cover;
+   
+
+   &__inner {
+      height: 100vh;
+      height: 100dvh;
+      min-height: 768px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+   }
+
+   &__item {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+   }
+
+   &__subtitle {
+      font-family: $acent;
+      font-size: 72px;
+      color: #ffffff;
+   }
+
+   &__title {
+      position: relative;
+      font-family: $title;
+      font-size: 150px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-bottom: 80px;
+      &::after {
+         @extend %decor;
+         bottom: -5%;
+         background-color: #ffffff;
+      }
+   }
+
+   &__btn {
+      display: inline-block;
+      font-family: $title;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #ffffff;
+      padding: 8px 20px;
+      border: 3px solid #ffffff;
+      transition: all .3s linear;
+      &:hover {
+         background-color: #ffffff;
+         color: #f38181;
+      }
+   }
+
+   &__stat {
+      position: absolute;
+      left: 0;
+      bottom: 20px;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+   }
+
+   &__stat-item {
+      position: relative;
+      flex: 0 1 calc(25% - 30px);
+      max-width: 250px;
+      display: flex;
+      align-items: center;
+      border-top: 3px solid #ffffff;
+      padding-top: 20px;
+      cursor: pointer;
+      &.active {
+         &::before {
+            @extend %decor;
+            top: -3px;
+            left: 0;
+            width: 100%;
+            transform: translateX(0);
+            animation: border 1.5s normal;
+         }  
+      }
+   }
+
+   &__stat-num {
+      font-family: $title;
+      font-size: 24px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-right: 10px;
+   }
+
+   &__stat-name {
+      font-family: $title;
+      font-size: 18px;
+      text-transform: uppercase;
+      color: #ffffff;
+   }
+}
+
+@keyframes border {
+   0% {width: 0;}
+   100% {width: 100%;}
+}

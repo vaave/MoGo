@@ -1,0 +1,22 @@
+.map {
+   padding: 60px 0 80px;
+   background: url(./../src/img/bg/map-bg.jpg) top center no-repeat;
+   background-size: cover;
+
+	&__title {
+      position: relative;
+      font-family: $title;
+      font-size: 24px;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding-top: 40px;
+      color: #f38181;
+      text-align: center;
+      background: url(./../src/img/svg/gps.svg) top center no-repeat;
+      background-size: 20px 26px;
+      &::after {
+         @extend %decor;
+         top: 150%;
+      }
+   }
+}

@@ -1,0 +1,51 @@
+.clients {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 150px 80px;
+
+   &__item {
+      flex: 0 1 calc(50% - 40px);
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+   }
+
+   &__img {
+      flex: 0 1 21%;
+   }
+
+   &__info {
+      flex: 0 1 75%;
+   }
+
+   &__name {
+      font-family: $title;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: #333333;
+      margin-bottom: 15px;
+   }
+
+   &__pos {
+      position: relative;
+      font-family: $basic;
+      font-size: 15px;
+      font-weight: 300;
+      font-style: italic;
+      color: #333333;
+      margin-bottom: 40px;
+      &::after {
+         @extend %decor;
+         top: 150%;
+         left: 0;
+         transform: translateX(0);
+      }
+   }
+
+   &__text {
+      font-family: $basic;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #999999;
+   }
+}

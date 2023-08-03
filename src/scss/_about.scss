@@ -1,0 +1,24 @@
+.about {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 35px;
+
+   &__item {
+      flex: 0 1 calc(33.33% - 25px);
+      img {
+         width: 100%;
+         object-fit: cover;
+      }
+   }
+
+   &__text {
+      font-family: $title;
+      font-size: 18px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #ffffff;
+      padding-top: 30px;
+      background: url(./../src/img/svg/team-icon.svg) top center no-repeat;
+   }
+}

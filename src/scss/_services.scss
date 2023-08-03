@@ -1,0 +1,51 @@
+.services {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+
+   &__item {
+      flex: 0 1 33.33%;
+      padding: 0px 60px 50px;
+      background-size: 32px 32px;
+      border-bottom: 1px solid #e5e5e5;
+      margin-bottom: 50px;
+      &:nth-child(1) {
+         background: url(./../src/img/services/photography.png) top left no-repeat;
+      }
+      &:nth-child(2) {
+         background: url(./../src/img/services/webdesign.png) top left no-repeat;
+      }
+      &:nth-child(3) {
+         background: url(./../src/img/services/creativity.png) top left no-repeat;
+      }
+      &:nth-child(4) {
+         background: url(./../src/img/services/seo.png) top left no-repeat;
+      }
+      &:nth-child(5) {
+         background: url(./../src/img/services/css-html.png) top left no-repeat;
+      }
+      &:nth-child(6) {
+         background: url(./../src/img/services/digital.png) top left no-repeat;
+      }
+      &:nth-child(n+4) {
+         border-bottom: none;
+         padding-bottom: 0;
+         margin-bottom: 0;
+      }
+   }
+
+   &__title {
+      font-family: $title;
+      font-weight: 700;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: #333333;
+      margin-bottom: 20px;
+   }
+
+   &__text {
+      font-family: $basic;
+      font-size: 15px;
+      color: #999999;
+   }
+}

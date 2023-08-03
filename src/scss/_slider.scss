@@ -1,0 +1,32 @@
+.slick {
+
+   &-list {
+      overflow: hidden;
+   }
+   
+   &-track {
+      display: flex;
+   }
+
+   &-arrow {
+      position: absolute;
+      top: 50%;
+      z-index: 2;
+      transform: translateY(-50%);
+      width: 15px;
+      height: 28px;
+      font-size: 0;
+      cursor: pointer;
+      background-size: cover;
+   }
+
+   &-next {
+      background: url(./../src/img/svg/arrow-next.svg) top center no-repeat;
+      right: 0;
+   }
+
+   &-prev {
+      background: url(./../src/img/svg/arrow-prev.svg) top center no-repeat;
+      left: 0;
+   }
+}

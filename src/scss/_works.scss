@@ -1,0 +1,43 @@
+.works {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+
+   &__item {
+      position: relative;
+      &--big {
+         grid-row: span 2;
+      }
+      img {
+         width: 100%;
+         object-fit: cover;
+      }
+      &.clicked {
+         .works__info {
+            opacity: 1;
+            visibility: visible;
+         }
+      }
+   }
+
+   &__info {
+      background: url(./../src/img/svg/photo.svg) top center no-repeat;
+      background-size: 30px 30px;
+      padding-top: 45px;
+   }
+
+   &__name {
+      font-family: $title;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-bottom: 17px;
+   }
+
+   &__text {
+      font-family: $basic;
+      font-size: 15px;
+      font-weight: 300;
+      font-style: italic;
+      color: #ffffff;
+   }
+}

@@ -1,0 +1,98 @@
+.accordion {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 10px;
+
+   &__list {
+      flex: 0 1 50%;
+   }
+
+   &__item {
+      margin-bottom: 5px;
+      &.open {
+         .accordion__content {
+            max-height: 185px;
+            opacity: 1;
+            padding: 20px;
+         }
+         .accordion__icon {
+            transform: rotate(180deg);
+         }
+      }
+   }
+
+   &__control {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+      padding: 0px 20px;
+      cursor: pointer;
+      border: 1px solid #e5e5e5;
+      &::-webkit-detalis-marker {
+         display: none;
+      }
+      
+   }
+
+   &__title {
+      font-family: $title;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: #333333;
+      padding: 20px 0 20px 40px;
+      background-size: 32px 32px;
+      &--photography {
+         background: url(./../src/img/services/photography.png) center left no-repeat;
+      }
+      &--creativity {
+         background: url(./../src/img/services/creativity.png) center left no-repeat;
+      }
+      &--design {
+         background: url(./../src/img/services/webdesign.png) center left no-repeat;
+      }
+   }
+
+   &__icon {
+      position: relative;
+      display: inline-block;
+      width: 22px;
+      height: 12px;
+      transition: transform .3s ease;
+      &::before,
+      &::after {
+         content: "";
+         position: absolute;
+         top: 0;
+         width: 3px;
+         height: 17px;
+         background-color: #cccccc;
+      }
+      &::before {
+         left: 0;
+         transform: rotate(-40deg);
+      }
+      &::after {
+         left: 50%;
+         transform: rotate(40deg);
+      }
+   }
+
+   &__content {
+      max-height: 0;
+      opacity: 0;
+      overflow-y: scroll;
+      padding: 0 20px;
+      border: 1px solid #e5e5e5;
+      border-top: none;
+      font-family: $basic;
+      font-size: 15px;
+      line-height: 1.6;
+      font-weight: 300;
+      font-style: italic;
+      color: #999999;
+      transition: all .3s ease;
+   }
+}

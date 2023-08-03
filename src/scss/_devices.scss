@@ -1,0 +1,14 @@
+.devices {
+   
+   &__ipad {
+      position: relative;
+      max-width: fit-content;
+      margin: 0 auto;
+   }
+
+   &__iphone {
+      position: absolute;
+      top: 35%;
+      right: -20%;
+   }
+}

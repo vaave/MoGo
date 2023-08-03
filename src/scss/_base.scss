@@ -1,0 +1,37 @@
+html, body {
+   scroll-behavior: smooth;
+}
+
+body {
+   font-family: $basic;
+   font-size: 15px;
+   color: #999999;
+   overflow-x: hidden;
+   &.lock {
+      overflow: hidden;
+   }
+}
+
+.container {
+   max-width: 1230px;
+   margin: 0 auto;
+   padding: 0 15px;
+}
+
+%decor {
+   content: "";
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 60px;
+   height: 3px;
+   background-color: #f38181;
+}
+
+.logo {
+   font-family: $title;
+   font-size: 30px;
+   font-weight: 700;
+   color: #ffffff;
+}
+

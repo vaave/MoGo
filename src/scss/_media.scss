@@ -1,0 +1,363 @@
+@media(max-width: 992px) {
+
+   .hero {
+      &__subtitle {
+         font-size: 50px;
+      }
+
+      &__title {
+         font-size: 100px;
+         margin-bottom: 40px;
+      }
+   }
+
+   .about {
+      &__item {
+         flex-basis: calc(50% - 25px);
+      }
+   }
+
+   .info {
+      &__item {
+         flex-basis: 33.33%;
+         &:nth-child(3n) {
+            border-right: 1px solid rgba($color: #fff, $alpha: .3);
+         }
+      }
+   }
+
+   .services {
+      &__item {
+         flex-basis: 50%;
+         
+         &:nth-child(4) {
+            border-bottom: 1px solid #e5e5e5;
+            padding-bottom: 50px;
+            margin-bottom: 50px;
+         }
+      }
+   }
+
+   .accordion {
+
+      flex-direction: column;
+ 
+      &__list {
+         order: 1;
+      }
+
+      &__img {
+         order: 2;
+      }
+   }
+
+   .team {
+      &__item {
+         flex-basis: calc(50% - 25px);
+      }
+   }
+
+   .partners {
+      row-gap: 30px;
+
+      &__item {
+         flex-basis: calc(33.33% - 10px);
+      }
+   }
+
+   .review {
+      &__info {
+         flex-basis: 75%;
+      }
+   }
+
+   .works {
+      grid-template-columns: repeat(2, 1fr);
+   }
+
+   .clients {
+      gap: 100px 20px;
+      &__item {
+         flex-basis: calc(50% - 10px);
+      }
+   }
+
+   .blog {
+      &__item {
+         flex-basis: calc(50% - 20px);
+      }
+   }
+
+   .footer {
+
+      &__inner {
+         flex-wrap: wrap;
+      }
+      &__info {
+         flex-basis: 55%;
+         margin-bottom: 20px;
+      }
+
+      &__blog {
+         flex-basis: 40%;
+      }
+
+      &__blog-item {
+         img {
+            width: 100%;
+            object-fit: cover;
+         }
+      }
+
+      &__insta {
+         flex-basis: 40%;
+      }
+
+      &__insta-item {
+         img {
+            width: 100%;
+            object-fit: cover;
+         }
+      }     
+   }
+}
+
+@media(max-width: 768px) {
+   .menu {
+      &__list {
+         display: block;
+         padding-top: 30px;
+      }
+      &__item {
+         margin: 0 0 20px 0;
+      }
+
+      &__link {
+         font-size: 35px;
+         &::after {
+            top: 120%;
+         }
+      }
+   }
+
+   .hero {
+      &__inner {
+         min-height: 600px;  
+      }
+   }
+
+   .section {
+      padding: 55px 0;
+
+      &--padding {
+         padding: 25px 0;
+      }
+
+      &--bottom {
+         padding-bottom: 0;
+      }
+
+      &__header {
+         max-width: 100%;
+         margin-bottom: 60px;
+      }
+
+      &__subtitle {
+         margin-bottom: 7px;
+      }
+
+      &__title {
+         font-size: 24px;
+         margin-bottom: 40px;
+      }
+
+      &__text {
+         font-size: 13px;
+      }
+   }
+
+   .services {
+      &__item {
+         padding-right: 20px;
+      }
+   }
+
+   .devices {
+
+      &__ipad {
+         max-width: 70%;
+      }
+
+      &__iphone {
+         max-width: 55%;
+         top: 35%;
+         right: -20%;
+      }
+   }
+
+   .review {
+      &__item {
+         flex-direction: column;
+         padding: 0;
+      }
+
+      &__img {
+         max-width: 20%;
+         margin: 0 auto 15px;
+      }
+
+      &__icon {
+         max-width: 10%;
+         margin: 0 auto 15px;
+      }
+
+      &__text {
+         font-size: 18px;
+      }
+
+      &__author {
+         font-size: 18px;
+      }
+   }
+
+   .slick {
+
+      &-arrow {
+         top: 10%;
+      }
+
+      &-prev {
+         left: 10%;
+      }
+
+      &-next {
+         right: 13%;
+      }
+   }
+
+   .clients {
+      row-gap: 45px;
+      &__item {
+         flex-basis: 100%;
+         gap: 10px;
+      }
+
+      &__info {
+         flex-basis: 85%;
+      }
+   }
+}
+
+@media(max-width: 576px) {
+
+   .header {
+      &__menu {
+         width: 85%;
+      }
+   }
+
+   .hero {
+      &__subtitle {
+         font-size: 35px;
+      }
+
+      &__title {
+         font-size: 50px;
+      }
+
+      &__stat-item {
+         flex-basis: calc(50% - 30px);
+         padding-top: 10px;
+      }
+   }
+
+   .about {
+      &__item {
+         flex-basis: 100%;
+      }
+   }
+
+   .info {
+      &__inner {
+         row-gap: 10px;
+      }
+
+      &__item {
+         padding: 20px 10px;
+         
+      }
+
+      &__num {
+         font-size: 30px;
+         margin-bottom: 15px;
+      }
+
+      &__text {
+         font-size: 12px;
+      }
+   }
+
+   .services {
+      &__item {
+         flex-basis: 100%;
+         padding-right: 0;
+         &:nth-child(5) {
+            border-bottom: 1px solid #e5e5e5;
+            padding-bottom: 50px;
+            margin-bottom: 50px;
+         }
+      }
+   }
+
+   .team {
+      &__item {
+         flex-basis: 100%;
+      }
+   }
+
+   .partners {
+      &__item {
+         flex-basis: calc(50% - 10px);
+      }
+   }
+
+   .works {
+      &__info {
+         background: none;
+         padding-top: 0;
+      }
+
+      &__name {
+         font-size: 13px;
+         margin-bottom: 10px;
+      }
+   }
+
+   .blog {
+      &__item {
+         flex-basis: 100%;
+      }
+   }
+
+   .footer {
+      &__inner {
+         display: block;
+      }
+
+      &__form-button {
+         flex-basis: 40%;
+      }
+
+      &__blog-img {
+         flex-basis: auto;
+      }
+
+      &__insta {
+         max-width: 60%;
+      }
+
+      &__bottom {
+         font-size: 13px;
+      }
+   }
+}
